@@ -1,0 +1,22 @@
+package com.asu.web.resolver;
+
+import com.asu.annotations.PathVariable;
+import com.asu.web.Request;
+
+import java.lang.reflect.Parameter;
+
+public class PathVariableResolver implements HandlerMethodArgumentResolver {
+
+    @Override
+    public boolean supportsParameter(Parameter parameter) {
+        return parameter.isAnnotationPresent(PathVariable.class);
+    }
+
+    @Override
+    public Object resolveArgument(Parameter parameter, Request request) {
+
+        String name = parameter.getAnnotation(PathVariable.class).value();
+
+        return request.getPathVariable(name);
+    }
+}
