@@ -1,11 +1,13 @@
 package com.asu.resource;
 
+import java.io.File;
+import java.net.JarURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
-import java.util.jar.*;
-import java.net.*;
-import java.io.File;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 public class ClassPathScanner {
 

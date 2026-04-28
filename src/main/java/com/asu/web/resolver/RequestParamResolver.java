@@ -1,7 +1,7 @@
 package com.asu.web.resolver;
 
-import com.asu.annotations.RequestParam;
 import com.asu.web.Request;
+import com.asu.web.annotations.RequestParam;
 import com.asu.web.validation.Valid;
 import com.asu.web.validation.Validator;
 

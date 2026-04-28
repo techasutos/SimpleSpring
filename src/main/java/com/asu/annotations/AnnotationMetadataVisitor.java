@@ -1,6 +1,8 @@
 package com.asu.annotations;
 
-import org.objectweb.asm.*;
+import org.objectweb.asm.AnnotationVisitor;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.Opcodes;
 
 public class AnnotationMetadataVisitor extends ClassVisitor {
 

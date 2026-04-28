@@ -1,38 +1,65 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
+target/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# =========================
+# Maven
+# =========================
+target/
+dependency-reduced-pom.xml
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# =========================
+# Gradle (if ever used)
+# =========================
+.gradle/
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# =========================
+# Java compiled output
+# =========================
+*.class
 
-### Mac OS ###
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+log/
+
+# =========================
+# OS files
+# =========================
 .DS_Store
+Thumbs.db
+
+# =========================
+# Environment files
+# =========================
+.env
+
+# =========================
+# Spring / custom framework cache
+# =========================
+*.pid
+*.lock
+
+# =========================
+# Coverage / reports
+# =========================
+coverage/
+jacoco/
+*.exec
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.swp
+*.bak
+.idea

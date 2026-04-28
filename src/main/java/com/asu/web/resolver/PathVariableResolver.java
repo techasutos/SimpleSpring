@@ -1,7 +1,7 @@
 package com.asu.web.resolver;
 
-import com.asu.annotations.PathVariable;
 import com.asu.web.Request;
+import com.asu.web.annotations.PathVariable;
 
 import java.lang.reflect.Parameter;
 

@@ -1,5 +1,6 @@
 package com.asu.annotations;
 
+import com.asu.beans.BeanDefinition;
 import com.asu.context.ApplicationContext;
 
 import java.lang.reflect.Method;
@@ -8,21 +9,24 @@ public class ConfigurationClassParser {
 
     public void parse(Class<?> configClass, ApplicationContext context) {
 
-        for (Method method : configClass.getDeclaredMethods()) {
+        try {
+            String configBeanName = configClass.getSimpleName();
 
-            if (method.isAnnotationPresent(Bean.class)) {
+            for (Method method : configClass.getDeclaredMethods()) {
 
-                try {
-                    Object configInstance = configClass.getDeclaredConstructor().newInstance();
+                if (method.isAnnotationPresent(Bean.class)) {
 
-                    Object bean = method.invoke(configInstance);
+                    String beanName = method.getName();
 
-                    context.registerBean(method.getName(), bean);
+                    BeanDefinition def =
+                            new BeanDefinition(method, configBeanName);
 
-                } catch (Exception e) {
-                    e.printStackTrace();
+                    context.register(beanName, def);
                 }
             }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }

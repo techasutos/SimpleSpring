@@ -1,3 +1,4 @@
+/*
 package com.asu.core;
 
 import com.asu.annotations.ConditionalOnProperty;
@@ -62,4 +63,4 @@ public class AutoConfigurationLoader {
 
         return prefix + "." + name;
     }
-}
+}*/

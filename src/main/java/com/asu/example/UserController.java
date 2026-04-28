@@ -2,7 +2,7 @@ package com.asu.example;
 
 import com.asu.annotations.Autowired;
 import com.asu.annotations.Controller;
-import com.asu.annotations.RequestMapping;
+import com.asu.web.annotations.RequestMapping;
 
 @Controller
 public class UserController {
